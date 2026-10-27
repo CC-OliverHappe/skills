@@ -21,7 +21,7 @@ Add concise TL;DR summaries directly to the specified Markdown specification fil
 Every summary must use exactly this format as a standalone Markdown paragraph:
 
 ```markdown
-**TL;DR: <Summary>**
+> **TL;DR:** <Summary>
 ```
 
 Do not replace this with a blockquote, alternate label, different emphasis, or a format copied from the source file.
@@ -44,12 +44,13 @@ Do not add summaries after:
 
 - Headings.
 - Short labels or short, self-explanatory bullets.
+- Single summarizing sentences already present in the file. 
 - Checklist items that do not contain substantive explanation.
 - Code blocks or inline code examples.
 - Tables.
 - Images, links presented on their own, or other standalone Markdown elements.
 - Blockquotes unless they contain a substantive requirement that is part of the specification.
-- Existing `**TL;DR: ...**` lines.
+- Existing `> **TL;DR:** ...` lines.
 
 Do not summarize a TL;DR line again.
 
@@ -77,8 +78,8 @@ Before finishing, verify:
 - Every qualifying longer bullet has exactly one TL;DR.
 - Short bullets and excluded elements were left unchanged.
 - Each summary is one or two sentences.
-- Each summary begins with `**TL;DR:` and ends with `**`.
-- Each summary is a standalone Markdown paragraph, not a blockquote, list continuation, table cell, or code block.
+- Each summary begins with `> **TL;DR:**`.
+- Each summary is a standalone Markdown blockquote not embedded in other blockquotes, lists, tables, or code blocks.
 - No summary adds unsupported claims.
 - Running the skill again would not create duplicate summaries.
 
